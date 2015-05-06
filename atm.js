@@ -1,6 +1,8 @@
 $(document).ready(function(){
   var balance;
   var withdraw;
+  var savBalance;
+  var savWithdraw;
 
  // deposits #amount1 to #balance1 & is stored in var balance
    $('#deposit1').click(function(){
@@ -17,7 +19,19 @@ $(document).ready(function(){
    })
     })
 
-
+   $('#deposit2').click(function(){
+   savBalance = $('#amount2').val();
+   $('#balance2').html(savBalance);
+   //debugger;
+   
+   //withdraws amount and updates balance
+   $('#withdraw2').click(function(){
+    savWithdraw = $('#amount2').val();
+    savBalance = savBalance - savWithdraw;
+    $('#balance2').html(savBalance);
+    debugger;
+   })
+    })
 
 
 
